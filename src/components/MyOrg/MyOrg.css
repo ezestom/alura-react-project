@@ -1,0 +1,33 @@
+.myorg-container {
+	width: 100%;
+	background-color: #fafafa;
+	display: grid;
+	place-items: center;
+}
+.myorg-article {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	padding: 20px;
+	background-color: #f0f0f0;
+	border-radius: 8px;
+	border: solid 1px #ccc;
+	margin: 20px;
+}
+.myorg-article > h3 {
+	font-size: 1.25em;
+	color: #646cff;
+	text-decoration: wavy underline;
+	margin: 0;
+}
+.myorg-article > img {
+	width: 15%;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+.myorg-article > img:hover {
+	transform: scale(0.97%);
+	transition: all 0.2s ease-in-out;
+	transform: translate(1%, 1%);
+}

@@ -1,4 +1,4 @@
-import imgHeader from "../../img/headerHeader_total.png";
+import imgHeader from "../../img/Header.png";
 import './Header.css'
 
 export function Header() {
