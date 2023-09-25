@@ -1,0 +1,28 @@
+.worker {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #f0f0f0;
+	border-radius: 8px;
+	border: solid 1px #ccc;
+	margin: 20px;
+}
+
+.header {
+	background-color: #dbdbdb;
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px 8px 0 0;
+}
+
+.header img {
+	width: 100%;
+	max-width: 100px;
+	border-radius: 1000px;
+   margin: 5% 0;
+   border: 3px solid #ccc;
+}
