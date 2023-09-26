@@ -5,7 +5,7 @@ import { Button } from "../Button/Button";
 import { useState } from "react";
 
 
-export function Form(props) {
+export function Form({ registerWorker, teams }) {
 	const [name, setName] = useState("");
 	const [job, setJob] = useState("");
 	const [photo, setPhoto] = useState("");
@@ -16,13 +16,13 @@ export function Form(props) {
 	function handleSubmit(e) {
 		e.preventDefault();
 		console.log();
-		const colaborador = {
+		const worker = {
 			name,
 			job,
 			photo,
 			org,
 		};
-		console.log(colaborador);
+		registerWorker(worker);
 	}
 	return (
 		<section className="form-container">
@@ -49,7 +49,7 @@ export function Form(props) {
 					value={photo}
 					setInput={setPhoto}
 				/>
-				<OptionsList value={org} setInput={setOrg} equipos={props.equipos} />
+				<OptionsList value={org} setInput={setOrg} teams={teams} />
 				<Button text="Crear colaborador" />
 			</form>
 		</section>

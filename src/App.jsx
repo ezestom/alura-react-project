@@ -7,11 +7,17 @@ import { Team } from "./components/Team/Team.jsx";
 
 function App() {
 	const [mostartFormulario, setMostrarFormulario] = useState(true);
+	const [workers, setWorkers] = useState([]);
 
 	const cambiarFormulario = () => {
 		setMostrarFormulario(!mostartFormulario);
 	};
-	const equipos = [
+	const registerWorker = (worker) => {
+		
+		setWorkers([...workers, worker]);
+	};
+
+	const teams = [
 		{
 			name: "Equipo 1 - Programación",
 			primaryColor: "#D6EAF8",
@@ -54,18 +60,20 @@ function App() {
 			<Header />
 			{mostartFormulario && (
 				<Form
-					equipos={equipos.map((equipo) => {
+					registerWorker={registerWorker}
+					teams={teams.map((equipo) => {
 						return equipo.name;
 					})}
 				/>
 			)}
 			<MyOrg cambiarFormulario={cambiarFormulario} />
-			{equipos.map((equipo, index) => (
+			{teams.map((equipo, index) => (
 				<Team
 					key={index}
 					equipo={equipo.name}
 					primaryColor={equipo.primaryColor}
 					secondaryColor={equipo.secondaryColor}
+					workers={workers}
 				/>
 			))}
 		</section>

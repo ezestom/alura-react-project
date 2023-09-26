@@ -2,8 +2,8 @@ import { Worker } from "../Worker/Worker";
 import "./Team.css";
 
 export function Team(props) {
-	const { equipo, primaryColor, secondaryColor } = props;
-	
+	const { equipo, primaryColor, secondaryColor, workers } = props;
+
 	let styles = {
 		backgroundColor: primaryColor,
 		color: secondaryColor,
@@ -11,13 +11,15 @@ export function Team(props) {
 
 	return (
 		<section className="team" style={styles}>
-			<h3 style={{borderBottom:{primaryColor}}}>{equipo}</h3>
+			<h3 style={styles}>{equipo}</h3>
 			<div className="workers">
-				<Worker />
-				<Worker />
-				<Worker />
-				<Worker />
-				<Worker />
+				{workers.map((worker, index) => {
+					return (
+						worker.org === equipo && (
+							<Worker key={index} {...worker} />
+						)
+					);
+				})}
 			</div>
 		</section>
 	);

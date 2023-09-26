@@ -1,12 +1,12 @@
 .header-container {
-	width: 100%;
-	background-color: #fafafa;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	background-color: rgb(98 120 247);
 }
 .header-container > img {
-	width: 100%;
-	max-width: 800px;
-	border-radius: 8px;
+	max-width: 100vw;
+	max-height: 20vh;
+	border-radius: 100px;
 }

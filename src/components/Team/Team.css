@@ -5,18 +5,17 @@
 	flex-direction: column;
 	width: 100%;
 	padding: 20px 0;
-	background-color: #d9f7e9;
 }
 .team h3 {
 	font-size: 1.25em;
 	margin: 0;
 	padding-bottom: 1rem;
-	border-bottom: transparent solid 2px;
+	/* border-bottom: transparent solid 2px; */
 }
 .workers {
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
 	flex-wrap: wrap;
 	gap: 1%;
 }

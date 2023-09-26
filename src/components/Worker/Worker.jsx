@@ -1,17 +1,19 @@
 import './Worker.css'
 
-export function Worker() {
+export function Worker({ name, job, photo, org}) {
 	return (
 		<article className="worker">
 			<div className="header">
 				<img
-					src="https://avatars.githubusercontent.com/ezestom"
+					src={photo}
 					alt="Foto de perfil"
 				/>
 			</div>
 			<div className="body">
-				<h3>Nombre</h3>
-				<p>Función</p>
+				<h4>{name}</h4>
+				<p>{job}</p>
+				<p>{org}</p>
+				
 			</div>
 		</article>
 	);
