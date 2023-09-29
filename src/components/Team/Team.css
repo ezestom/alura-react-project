@@ -5,6 +5,8 @@
 	flex-direction: column;
 	width: 100%;
 	padding: 20px 0;
+	border-bottom: 1px solid #ccc;
+	position: relative;
 }
 .team h3 {
 	font-size: 1.25em;
@@ -15,7 +17,15 @@
 .workers {
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	flex-wrap: wrap;
 	gap: 1%;
+	text-align: center;
+	place-items: center;
+}
+.color-input {
+	position: absolute;
+	top: 3%;
+	right: 3%;
+	background-color: transparent;
 }

@@ -7,7 +7,6 @@
 	border-radius: 8px;
 	border: solid 1px #ccc;
 	margin: 20px;
-	max-width: 200px;
 }
 
 .header {
@@ -18,12 +17,43 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 8px 8px 0 0;
+	position: relative;
 }
-
+.btn-close{
+	position: absolute;
+	top: 3%;
+	right: 3%;
+	background-color: transparent;
+	color: #6278f7;
+}
+.btn-close:hover{
+	cursor: pointer;
+	color: black;
+	transition: all 0.1s ease-in-out;
+}
 .header img {
 	width: 100%;
 	max-width: 100px;
 	border-radius: 1000px;
-   margin: 5% 0;
+	margin: 10%;
    border: 3px solid #ccc;
+}
+.body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+	min-width: 200px;
+}
+.body h4 {
+	font-size: 1.15em;
+	color: #6278f7;
+	margin: 5px 0;
+}
+.body span {
+	font-size: 1em;
+	color: #6278f7;
+	margin: 5px 0;
 }

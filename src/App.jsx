@@ -13,45 +13,49 @@ function App() {
 		setMostrarFormulario(!mostartFormulario);
 	};
 	const registerWorker = (worker) => {
-		
 		setWorkers([...workers, worker]);
+	};
+	const deleteWorker = (worker) => {
+		const newWorkers = workers.filter((w) => w.name !== worker.name);
+		setWorkers(newWorkers);
+		console.log(newWorkers);
 	};
 
 	const teams = [
 		{
 			name: "Equipo 1 - Programación",
 			primaryColor: "#D6EAF8",
-			secondaryColor: "#646cff",
+			secondaryColor: "#1F4B99", // Tono más fuerte de azul
 		},
 		{
 			name: "Equipo 2 - Frontend",
 			primaryColor: "#CCE6F5",
-			secondaryColor: "#646cff",
+			secondaryColor: "#165B96", // Tono más fuerte de azul
 		},
 		{
 			name: "Equipo 3 - Data Science",
 			primaryColor: "#D4E8F2",
-			secondaryColor: "#646cff",
+			secondaryColor: "#1D538C", // Tono más fuerte de azul
 		},
 		{
 			name: "Equipo 4 - Devops",
 			primaryColor: "#D4E5ED",
-			secondaryColor: "#646cff",
+			secondaryColor: "#1C4F87", // Tono más fuerte de azul
 		},
 		{
 			name: "Equipo 5 - UX / UI",
 			primaryColor: "#CDE4F0",
-			secondaryColor: "#646cff",
+			secondaryColor: "#195485", // Tono más fuerte de azul
 		},
 		{
 			name: "Equipo 6 - Mobile",
 			primaryColor: "#CDE9F5",
-			secondaryColor: "#646cff",
+			secondaryColor: "#1A5A92", // Tono más fuerte de azul
 		},
 		{
 			name: "Equipo 7 - Innovación y Gestión",
 			primaryColor: "#D4E7F2",
-			secondaryColor: "#646cff",
+			secondaryColor: "#1D538C", // Tono más fuerte de azul
 		},
 	];
 
@@ -74,6 +78,7 @@ function App() {
 					primaryColor={equipo.primaryColor}
 					secondaryColor={equipo.secondaryColor}
 					workers={workers}
+					deleteWorker={deleteWorker}
 				/>
 			))}
 		</section>
