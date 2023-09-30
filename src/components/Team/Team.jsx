@@ -2,8 +2,15 @@ import { Worker } from "../Worker/Worker";
 import "./Team.css";
 
 export function Team(props) {
-	const { equipo, primaryColor, secondaryColor, workers, deleteWorker } =
-		props;
+	const {
+		equipo,
+		primaryColor,
+		secondaryColor,
+		workers,
+		deleteWorker,
+		updateColor,
+		fav,
+	} = props;
 
 	let styles = {
 		backgroundColor: primaryColor,
@@ -17,17 +24,17 @@ export function Team(props) {
 				className="color-input"
 				value={primaryColor}
 				onChange={(e) => {
-					console.log(e.target.value);
+					updateColor(e.target.value, equipo);
 				}}
 			/>
 			<h3 style={styles}>{equipo}</h3>
 			<div className="workers">
-				{workers.map((worker, index) => {
+				{workers.map((worker) => {
 					return (
 						worker.org === equipo && (
 							<Worker
 								deleteWorker={deleteWorker}
-								key={index}
+								key={worker.id}
 								{...worker}
 							/>
 						)

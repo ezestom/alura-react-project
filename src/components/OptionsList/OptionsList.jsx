@@ -6,7 +6,7 @@ export function OptionsList(props) {
 		<>
 			<label htmlFor="equipos">Equipos</label>
 			<select name="equipos" id="equipos" onChange={handleChange}>
-				<option value="" disabled defaultValue="" >
+				<option value="" disabled >
 					Seleccione un equipo
 				</option>
 				{props.teams.map((equipo, index) => {

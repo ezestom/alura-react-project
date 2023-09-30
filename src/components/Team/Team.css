@@ -19,13 +19,16 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	flex-wrap: wrap;
-	gap: 1%;
 	text-align: center;
 	place-items: center;
 }
 .color-input {
 	position: absolute;
-	top: 3%;
-	right: 3%;
+	top: 1rem;
+	right: 1rem;
 	background-color: transparent;
+	border: none;
+	
+	border-radius: 8px;
+
 }

@@ -1,16 +1,20 @@
 input::placeholder {
 	color: #dbdbdb;
-	padding-left: 5px;
 }
 .form > input,
-.form > select {
-	width:100%;
+.form > select,
+.form2 > input,
+.form2 > select {
+	width: 100%;
 	margin-bottom: 10px;
 	border-radius: 8px;
 	border: 1px solid #dbdbdb;
 	font-size: 1rem;
 	padding: 8px 0;
+	padding-left: 1px;
 }
-form label{
+.form label,
+.form2 label {
 	color: black;
 }
+
