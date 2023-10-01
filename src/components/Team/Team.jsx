@@ -10,6 +10,7 @@ export function Team(props) {
 		deleteWorker,
 		updateColor,
 		fav,
+		updateFav,
 	} = props;
 
 	let styles = {
@@ -29,17 +30,21 @@ export function Team(props) {
 			/>
 			<h3 style={styles}>{equipo}</h3>
 			<div className="workers">
-				{workers.map((worker) => {
-					return (
-						worker.org === equipo && (
-							<Worker
-								deleteWorker={deleteWorker}
-								key={worker.id}
-								{...worker}
-							/>
-						)
-					);
-				})}
+				{workers.map((worker, index) => (
+					<Worker
+						key={index}
+						id={worker.id}
+						name={worker.name}
+						job={worker.job}
+						photo={worker.photo}
+						org={worker.org}
+						deleteWorker={deleteWorker}
+						primaryColor={primaryColor}
+						secondaryColor={secondaryColor}
+						fav={worker.fav}
+						updateFav={updateFav}
+					/>
+				))}
 			</div>
 		</section>
 	);

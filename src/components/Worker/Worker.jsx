@@ -10,8 +10,8 @@ export function Worker({
 	deleteWorker,
 	primaryColor,
 	secondaryColor,
-	updateFav,
 	fav,
+	updateFav,
 }) {
 	const handleDelete = (id) => {
 		confirm(`Desea eliminar el trabajador con id: ${id} ?`)
@@ -32,16 +32,12 @@ export function Worker({
 				{fav === true ? (
 					<AiFillHeart
 						className="btn-fav"
-						onClick={() => {
-							updateFav(id);
-						}}
+						onClick={() => updateFav(id)}
 					/>
 				) : (
 					<AiOutlineHeart
 						className="btn-fav"
-						onClick={() => {
-							updateFav(id);
-						}}
+						onClick={() => updateFav(id)}
 					/>
 				)}
 

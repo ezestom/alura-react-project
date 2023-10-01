@@ -135,7 +135,7 @@ function App() {
 		});
 		setTeams(newTeams);
 	};
-	const updateFav = (id) => {
+ const updateFav = (id) => {
 		const newWorkers = workers.map((worker) => {
 			if (worker.id === id) {
 				worker.fav = !worker.fav;
@@ -143,7 +143,7 @@ function App() {
 			return worker;
 		});
 		setWorkers(newWorkers);
-	}
+	};
 
 	return (
 		<section className="app">
@@ -168,6 +168,7 @@ function App() {
 					deleteWorker={deleteWorker}
 					updateColor={updateColor}
 					updateFav={updateFav}
+					fav={workers.fav}
 				/>
 			))}
 		</section>
